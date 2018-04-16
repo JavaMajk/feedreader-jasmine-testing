@@ -1,0 +1,45 @@
+{
+    "extends": "airbnb",
+    
+    "ecmaFeatures": {
+        "blockBindings": true,
+        "modules": true,
+        "superInFunctions": true
+      },
+    "env":{
+        "browser":true,
+        "node":true,
+        "jquery": true,
+        "jasmine": true
+    },
+    "rules": {
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        "no-unused-vars": [
+            "error",
+            {
+                "vars": "local",
+                "args": "none"
+            }
+        ],
+        "one-var": [
+            "error",
+            "consecutive"
+        ],
+        "indent": [
+            "error",
+            2, { "VariableDeclarator": { "var": 2, "let": 2, "const": 3 } }
+        ]
+    },
+    "globals": {
+        "it": false,
+        "expect": false,
+        "describe": false,
+        "beforeEach": false,
+        "Contact": false,
+        "allFeeds": false
+    }
+
+}
