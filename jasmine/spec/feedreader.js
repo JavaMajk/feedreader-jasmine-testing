@@ -98,15 +98,15 @@ $(function testing() {
             */
     beforeEach((done) => {
       loadFeed(0, () => {
-        firstFeed = document.querySelector('.feed');
+        firstFeed = document.querySelector('.feed').textContent;
         loadFeed(1, () => {
-          secondFeed = document.querySelector('.feed');
+          secondFeed = document.querySelector('.feed').textContent;
           done();
         });
       });
     });
     it('has loaded different feed', (done) => {
-      expect(firstFeed.textContent).not.toBe(secondFeed.tecxtContent);
+      expect(firstFeed).not.toBe(secondFeed);
       done();
     });
   });
